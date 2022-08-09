@@ -10,6 +10,7 @@ import {
   Image,
   Carousel,
   Experience,
+  TechStackInput,
 } from "dev-portfolio";
 import {
   logoOptionDefault,
@@ -37,11 +38,14 @@ function App() {
       />
       <Carousel
         id="TOP"
+        width="65%"
         isArrowShow={false}
-        transition={100}
-        width="60%"
-        arrowLocation="mid-side"
+        isAutoplay={true}
+        transition={1}
+        autoplaySpeed={900}
+        isAutoplayControl={false}
       >
+        <Image noShowHead={true} src="common/firstBanner.png" />
         <Image noShowHead={true} src="common/banner.png" />
       </Carousel>
       <SizeAdjustment id="INTRO">
@@ -155,6 +159,12 @@ const SizeAdjustment = styled.div`
     padding: 10px 0;
     border-bottom: 1px solid;
   }
+  @media screen and (max-width: 768px) {
+    padding: 10vw;
+    h3 {
+      font-size: 8vw;
+    }
+  }
 `;
 
 const TeckStackWrap = styled.div`
@@ -164,6 +174,12 @@ const TeckStackWrap = styled.div`
     padding: 10px 0;
     border-bottom: 1px solid;
   }
+  @media screen and (max-width: 768px) {
+    padding: 10vw;
+    h3 {
+      font-size: 8vw;
+    }
+  }
 `;
 
 const GalleryWrap = styled.div`
@@ -172,5 +188,11 @@ const GalleryWrap = styled.div`
     font-size: 35px;
     padding: 10px 10px 20px 10px;
     border-bottom: 1px solid;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 10vw;
+    h2 {
+      font-size: 8vw;
+    }
   }
 `;

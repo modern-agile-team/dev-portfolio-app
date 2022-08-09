@@ -1,6 +1,9 @@
 export const techStacksDefault = [
   {
-    nameOption: { name: "HTML-5", size: "50px", iconColor: "red" },
+    nameOption: {
+      name: "HTML",
+      logoName: "HTML-5",
+    },
     progressBarOption: {
       rate: "95%",
       colorTo: "#C3C7DE",
@@ -9,7 +12,10 @@ export const techStacksDefault = [
     },
   },
   {
-    nameOption: { name: "CSS-3", size: "40px", iconColor: "#339933" },
+    nameOption: {
+      name: "CSS",
+      logoName: "CSS-3",
+    },
     progressBarOption: {
       rate: "99%",
       colorTo: "#544F7C",
@@ -18,7 +24,10 @@ export const techStacksDefault = [
     },
   },
   {
-    nameOption: { name: "Javascript", size: "40px", iconColor: "#E2D784" },
+    nameOption: {
+      name: "Javascript",
+      logoName: "Javascript",
+    },
     progressBarOption: {
       rate: "90%",
       colorTo: "#C3C7DE",
@@ -27,7 +36,10 @@ export const techStacksDefault = [
     },
   },
   {
-    nameOption: { name: "Typescript", size: "40px", iconColor: "#339933" },
+    nameOption: {
+      name: "Typescript",
+      logoName: "Typescript-icon",
+    },
     progressBarOption: {
       rate: "80%",
       colorTo: "#544F7C",
@@ -36,7 +48,10 @@ export const techStacksDefault = [
     },
   },
   {
-    nameOption: { name: "React", size: "40px", iconColor: "#339933" },
+    nameOption: {
+      name: "React",
+      logoName: "React",
+    },
     progressBarOption: {
       rate: "85%",
       colorTo: "#544F7C",
@@ -45,7 +60,10 @@ export const techStacksDefault = [
     },
   },
   {
-    nameOption: { name: "Nextjs", size: "40px", iconColor: "#339933" },
+    nameOption: {
+      name: "Nextjs",
+      logoName: "Nextjs",
+    },
     progressBarOption: {
       rate: "80%",
       colorTo: "#C3C7DE",
@@ -54,7 +72,10 @@ export const techStacksDefault = [
     },
   },
   {
-    nameOption: { name: "Redux", size: "40px", iconColor: "#339933" },
+    nameOption: {
+      name: "React-Redux",
+      logoName: "Redux",
+    },
     progressBarOption: {
       rate: "40%",
       colorTo: "#C3C7DE",
@@ -63,7 +84,10 @@ export const techStacksDefault = [
     },
   },
   {
-    nameOption: { name: "Sass", size: "40px", iconColor: "#339933" },
+    nameOption: {
+      name: "Sass | Scss",
+      logoName: "Sass",
+    },
     progressBarOption: {
       rate: "90%",
       colorTo: "#544F7C",
@@ -93,12 +117,6 @@ export const historyListDefault = [
     title: "모던 애자일",
     des: "서비스 개발\n\n프론트앤드 개발자로 활동하며 서비스를 개발했습니다.\n애자일 협업방식을 따르며 체계적인 개발을 진행했습니다.",
   },
-  {
-    startDate: "2022.08",
-    endDate: "현재진행형",
-    title: "취업준비중",
-    des: "취업해야지 이제~",
-  },
 ];
 
 const channelOptionDefault = [
@@ -106,18 +124,15 @@ const channelOptionDefault = [
     name: "github",
     redirectUrl: "https://github.com/seohyunsim",
     color: "black",
-    size: "23px",
   },
   {
     name: "velog",
     redirectUrl: "https://velog.io/@seohyunsim",
     color: "#20C997",
-    size: "23px",
   },
   {
     name: "instagram",
     color: "#E1406C",
-    size: "23px",
   },
 ];
 
