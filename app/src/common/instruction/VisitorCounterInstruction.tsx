@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { VisitorCounter } from "dev-portfolio";
+import countAPI from "../../apis/count";
 
 const VisitorCounterInstruction = () => {
+  const [todayCounter, setTodayCounter] = useState<number>(0);
+  const [totalCounter, setTotalCounter] = useState<number>(0);
+
+  useEffect(() => {
+    (async () => {
+      const result = await countAPI.getCount();
+      setTodayCounter(result.todayCount);
+      setTotalCounter(result.totalCount);
+    })();
+  }, []);
+
   return (
     <Wrap>
       <InstructionWrap>
@@ -20,11 +32,22 @@ const VisitorCounterInstruction = () => {
           instructions on how to use it will be written.
         </span>
         <ThemeWrap>
-          <VisitorCounter />
-          <VisitorCounter theme="simple" />
+          <VisitorCounter
+            todayVisitor={todayCounter}
+            totalVisitor={totalCounter}
+          />
+          <VisitorCounter
+            theme="simple"
+            todayVisitor={todayCounter}
+            totalVisitor={totalCounter}
+          />
         </ThemeWrap>
       </InstructionWrap>
-      <VisitorCounter theme="big-size" />
+      <VisitorCounter
+        theme="big-size"
+        todayVisitor={todayCounter}
+        totalVisitor={totalCounter}
+      />
     </Wrap>
   );
 };

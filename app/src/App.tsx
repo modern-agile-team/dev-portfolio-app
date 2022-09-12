@@ -20,8 +20,19 @@ import {
   VisitorCounterInstruction,
 } from "./common";
 import "./App.css";
+import useCommnet from "./hooks/useComment";
 
 function App() {
+  const {
+    comment,
+    commentList,
+    password,
+    nickname,
+    handleChangeDescription,
+    handleChangeNickname,
+    handleChangePassword,
+    handleCreateComment,
+  } = useCommnet();
   return (
     <div className="App">
       <Header />
@@ -64,7 +75,16 @@ function App() {
         <Image src="https://picsum.photos/500/600/?random" />
       </Masonry>
       <VisitorCounterInstruction />
-      <VisitorComment />
+      <VisitorComment
+        handleChangeDescription={handleChangeDescription}
+        handleChangeNickname={handleChangeNickname}
+        handleChangePassword={handleChangePassword}
+        handleCreateComment={handleCreateComment}
+        comment={comment}
+        nickname={nickname}
+        password={password}
+        commentList={commentList}
+      />
       <CardInstruction />
       <Contact />
     </div>

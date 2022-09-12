@@ -15,8 +15,8 @@ const TeckstackInputInstruction = () => {
         input window below.
       </span>
       <span>
-        If you have a favorite icon in the input component, the name next to
-        logos is the props of nameOption in the TechStackList component
+        Please note that the text below the icon you searched is a nameOption
+        props.
       </span>
       <span>Once you have found all the icons, you may delete them!</span>
     </Wrap>
