@@ -22,6 +22,6 @@ export default CardInstruction;
 
 const Wrap = styled.div`
   display: flex;
-  padding: 3em;
+  padding: 12em 3em;
   justify-content: space-around;
 `;

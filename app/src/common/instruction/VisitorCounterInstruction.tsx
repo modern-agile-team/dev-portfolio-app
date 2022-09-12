@@ -13,7 +13,7 @@ const VisitorCounterInstruction = () => {
         </span>
         <span>
           It consists of three themes and consists of default, simple, and
-          large-sized themes.
+          big-size themes.
         </span>
         <span>
           A personal server can be built through a docker-compose, and detailed
