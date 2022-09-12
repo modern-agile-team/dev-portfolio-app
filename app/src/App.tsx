@@ -5,39 +5,39 @@ import {
   Intro,
   Gallery,
   Item,
-  Card,
   Masonry,
   Image,
   Carousel,
   Experience,
   TechStackInput,
-  VisitorCounter,
   VisitorComment,
 } from "dev-portfolio";
-import styled from "styled-components";
+import {
+  CardInstruction,
+  Introduction,
+  TeckstackInputInstruction,
+  DisplayPortfolioInstruction,
+  VisitorCounterInstruction,
+} from "./common";
 import "./App.css";
+import styled from "styled-components";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <VisitorCounter />
-      <VisitorComment />
-      <CardWrap>
-        <Card width="20vw" height="20vw" hover="down">
-          This is Card component
-        </Card>
-        <Card width="20vw" height="20vw" shape="round-square" hover="zoom">
-          You can use this components anyware
-        </Card>
-        <Card width="20vw" height="20vw" shape="round" hover="up">
-          See official documentation for details
-        </Card>
-      </CardWrap>
+      <Introduction />
       <Intro />
       <TechStackList />
+      <TeckstackInputInstruction />
       <TechStackInput />
       <Experience />
+      <DisplayPortfolioInstruction />
+      <Carousel>
+        <Item title="1" />
+        <Item title="2" />
+        <Item title="3" />
+      </Carousel>
       <Gallery>
         <Item />
         <Item />
@@ -64,20 +64,12 @@ function App() {
         <Image src="https://picsum.photos/500/600/?random" />
         <Image src="https://picsum.photos/500/600/?random" />
       </Masonry>
-      <Carousel>
-        <Item title="1" />
-        <Item title="2" />
-        <Item title="3" />
-      </Carousel>
+      <VisitorCounterInstruction />
+      <VisitorComment />
+      <CardInstruction />
       <Contact />
     </div>
   );
 }
 
 export default App;
-
-const CardWrap = styled.div`
-  display: flex;
-  padding: 3em;
-  justify-content: space-around;
-`;
