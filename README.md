@@ -3,7 +3,7 @@ Boiler-Plate for web development using dev-portfolio library.
 
 # 🚨 Caution!!
 This is depending on [create-dev-portfolio](https://github.com/modern-agile-team/create-dev-portfolio) as a Boiler-Plate for the dev-portfolio web.  
-Therefore, this can only operate through [create-dev-portfolio](https://github.com/modern-agile-team/create-dev-portfolio) Please refer to the README.md below.
+Therefore, this can only operate through [create-dev-portfolio](https://github.com/modern-agile-team/create-dev-portfolio) Please refer to the README.md below.  
 Please go to the link below!
 
 https://github.com/modern-agile-team/create-dev-portfolio
