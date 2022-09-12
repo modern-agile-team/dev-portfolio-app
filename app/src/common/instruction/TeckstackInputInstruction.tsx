@@ -6,19 +6,22 @@ const TeckstackInputInstruction = () => {
     <Wrap>
       <h1>TechStackInput</h1>
       <span>
-        This component is designed to help you select icons when you write the
+        This component is designed to help you select logo when you write the
         TechStackList props.
       </span>
       <span>
-        If you want to know the name of the icon for the technology you use when
+        If you want to know the name of the logo for the technology you use when
         you write TechStackList props, search for your technology stack in the
         input window below.
       </span>
       <span>
-        Please note that the text below the icon you searched is a nameOption
-        props.
+        Name of the icon you searched is the nameOption's logoName value in
+        techStackList props.
       </span>
-      <span>Once you have found all the icons, you may delete them!</span>
+      <span>
+        If you find the logo name you want, you can write it on the
+        'TechStackList' component and delete the 'TechStackInput' component!
+      </span>
     </Wrap>
   );
 };
