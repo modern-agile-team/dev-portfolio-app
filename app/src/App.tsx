@@ -20,7 +20,7 @@ import {
   VisitorCounterInstruction,
 } from "./common";
 import "./App.css";
-import useCommnet from "./hooks/useComment";
+import useComment from "./hooks/useComment";
 
 function App() {
   const {
@@ -32,7 +32,7 @@ function App() {
     handleChangeNickname,
     handleChangePassword,
     handleCreateComment,
-  } = useCommnet();
+  } = useComment();
   return (
     <div className="App">
       <Header />
