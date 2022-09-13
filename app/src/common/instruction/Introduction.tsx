@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Introduction = () => {
   return (
     <Wrap>
-      <span>Hi there!</span>
+      <span style={{ color: "red" }}>Hi there!</span>
       <span>This manual will help you create a better portfolio.</span>
       <span>
         Create a creative portfolio by referring to simple examples of the
@@ -23,9 +23,11 @@ export default Introduction;
 
 const Wrap = styled.div`
   padding: 4em;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
+  font-size: 26px;
+  font-weight: 400;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
