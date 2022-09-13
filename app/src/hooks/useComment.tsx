@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import commentAPI from "../apis/comment";
 
-const useCommnet = () => {
+const useComment = () => {
   const [commentList, setCommentList] = useState<any[] | undefined>(undefined);
   const [comment, setComment] = useState("");
   const [nickname, setNickname] = useState("");
@@ -74,4 +74,4 @@ const useCommnet = () => {
   };
 };
 
-export default useCommnet;
+export default useComment;
