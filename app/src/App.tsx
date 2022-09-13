@@ -35,20 +35,20 @@ function App() {
   } = useComment();
   return (
     <div className="App">
-      <Header />
+      <Header id="Header" />
       <Introduction />
-      <Intro />
-      <TechStackList />
+      <Intro id="Intro" />
+      <TechStackList id="TechStackList" />
       <TeckstackInputInstruction />
       <TechStackInput />
-      <Experience />
+      <Experience id="Experience" />
       <DisplayPortfolioInstruction />
-      <Carousel>
+      <Carousel id="Carousel">
         <Item title="1" />
         <Item title="2" />
         <Item title="3" />
       </Carousel>
-      <Gallery>
+      <Gallery id="Gallery">
         <Item />
         <Item />
         <Item />
@@ -59,23 +59,24 @@ function App() {
         <Item />
         <Item />
       </Gallery>
-      <Masonry>
+      <Masonry id="Masonry">
         <Image src="https://picsum.photos/600/600/?random" />
-        <Image src="https://picsum.photos/600/1100/?random" />
+        <Image src="https://picsum.photos/600/900/?random" />
         <Image src="https://picsum.photos/300/400/?random" />
         <Image src="https://picsum.photos/600/400/?random" />
         <Image src="https://picsum.photos/600/900/?random" />
         <Image src="https://picsum.photos/600/300/?random" />
-        <Image src="https://picsum.photos/400/100/?random" />
+        <Image src="https://picsum.photos/400/700/?random" />
         <Image src="https://picsum.photos/600/600/?random" />
         <Image src="https://picsum.photos/600/800/?random" />
-        <Image src="https://picsum.photos/600/1000/?random" />
+        <Image src="https://picsum.photos/600/300/?random" />
         <Image src="https://picsum.photos/600/500/?random" />
         <Image src="https://picsum.photos/500/600/?random" />
-        <Image src="https://picsum.photos/500/600/?random" />
+        <Image src="https://picsum.photos/700/600/?random" />
       </Masonry>
       <VisitorCounterInstruction />
       <VisitorComment
+        id="VisitorComment"
         handleChangeDescription={handleChangeDescription}
         handleChangeNickname={handleChangeNickname}
         handleChangePassword={handleChangePassword}
@@ -86,7 +87,7 @@ function App() {
         commentList={commentList}
       />
       <CardInstruction />
-      <Contact />
+      <Contact id="Contact" />
     </div>
   );
 }
