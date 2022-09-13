@@ -22,7 +22,7 @@ const DisplayPortfolioInstruction = () => {
 export default DisplayPortfolioInstruction;
 
 const Wrap = styled.div`
-  padding: 10em 2.2em 5em 2.2em;
+  padding: 1em 2.2em 5em 2.2em;
   display: flex;
   flex-direction: column;
   gap: 1em;

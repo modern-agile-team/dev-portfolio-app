@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { VisitorCounter } from "dev-portfolio";
 import countAPI from "../../apis/count";
 
-const VisitorCounterInstruction = () => {
+const VisitorCounterInstruction = ({ id }: { id: string }) => {
   const [todayCounter, setTodayCounter] = useState<number>(0);
   const [totalCounter, setTotalCounter] = useState<number>(0);
 
@@ -16,7 +16,7 @@ const VisitorCounterInstruction = () => {
   }, []);
 
   return (
-    <Wrap>
+    <Wrap id={id}>
       <InstructionWrap>
         <h1>Visitor Counter</h1>
         <span>
@@ -55,7 +55,7 @@ const VisitorCounterInstruction = () => {
 export default VisitorCounterInstruction;
 
 const Wrap = styled.div`
-  padding: 10em 0em;
+  padding: 3em 0em;
 `;
 
 const ThemeWrap = styled.div`
@@ -65,7 +65,7 @@ const ThemeWrap = styled.div`
 `;
 
 const InstructionWrap = styled.div`
-  padding: 0em 3em;
+  padding: 0em 2em;
   display: flex;
   flex-direction: column;
   gap: 1em;

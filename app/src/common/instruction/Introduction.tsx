@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Introduction = () => {
+const Introduction = ({ id }: { id: string }) => {
   return (
-    <Wrap>
+    <Wrap id={id}>
       <span style={{ color: "red" }}>Hi there!</span>
       <span>This manual will help you create a better portfolio.</span>
       <span>
@@ -22,12 +22,12 @@ const Introduction = () => {
 export default Introduction;
 
 const Wrap = styled.div`
-  padding: 4em;
-  height: 40vh;
+  padding: 2em;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   font-size: 26px;
   font-weight: 400;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;

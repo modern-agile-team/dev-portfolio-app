@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const TeckstackInputInstruction = () => {
+const TeckstackInputInstruction = ({ id }: { id: string }) => {
   return (
-    <Wrap>
+    <Wrap id={id}>
       <h1>TechStackInput</h1>
       <span>
         This component is designed to help you select logo when you write the
