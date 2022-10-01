@@ -24,6 +24,7 @@ import {
 } from "./common";
 import useComment from "./hooks/useComment";
 import "./App.css";
+import color from "./common/style/theme";
 
 function App() {
   /**
@@ -54,34 +55,43 @@ function App() {
        * {@link https://github.com/modern-agile-team/dev-portfolio#header}
        */}
       <Header
-        id="Header"
+        headerBackgroundColor={color.mainColor}
         logoOption={{
           redirectUrl: "/",
           title: "dev-portfolio",
-          logoMargin: "0 20px 0 20px",
-          logoWidth: "60px",
-          titleColor: "black",
+          logoHidden: true,
+          titleColor: `${color.pointColor}`,
           titleSize: "30px",
         }}
         channels={[
           {
             name: "github",
             redirectUrl: "https://",
-            color: "#181717BB",
+            color:`${color.pointColor}` ,
             size: "30px",
           },
           {
             name: "facebook",
             redirectUrl: "https://",
-            color: "#1877F2BB",
+            color: `${color.pointColor}`,
             size: "30px",
           },
         ]}
         sideBarOption={{
-          mainTitle: "dev-portfolio",
-          iconSize: "30px",
-          iconColor: "#181717BB",
-          iconMargin: "0px 20px 0px 20px",
+          mainTitle: 'dev-portfolio',
+          mainTitleSize: '24px',
+          mainTitleColor: 'white',
+          mainTitleAlign: 'left',
+          mainTitleBorderColor: 'white',
+          iconName: 'ant-design:menu-fold-outlined', //Refer to the guidelines.
+          iconSize: '28px',
+          iconColor: `${color.pointColor}`,
+          iconMargin: '0px 12px 0px 12px',
+          itemTextColor: 'white',
+          itemTextAlign: 'left',
+          itemBackgroundColor: `${color.mainColor}`,
+          itemHoverdBackgroundColor: `${color.pointColor}`,
+          backgroundColor: `${color.mainColor}`,
         }}
       />
 
@@ -91,23 +101,58 @@ function App() {
        * If you want view internal of Introduction,
        * go to the './src/common/instruction/Introduction.tsx'
        */}
-      <Introduction id="Manual Introduction" />
+      <Introduction id="['Manual Introduction', 'bx:home-smile']"/>
 
       {/**
        * @component Intro
        * {@link https://github.com/modern-agile-team/dev-portfolio#intro}
        */}
-      <Intro id="Intro" />
+      <Intro id="['Intro', 'clarity:cursor-hand-open-line']" backgroundColor={color.lightGrey}/>
 
       {/**
        * @component TechStackList
        * {@link https://github.com/modern-agile-team/dev-portfolio#techstacklist}
        */}
-      <TechStackListTitle id="TechStackList">
+      <TechStackListTitle id="['TechStackList', 'bx:coin-stack']">
         Tech Stack List
       </TechStackListTitle>
-      <TechStackList />
-
+      <TechStackList 
+        techStackList={[
+          {
+            nameOption: { name: 'Javascript', logoName: 'Javascript', fontSize: '18px', logoSize: '24px' },
+            progressBarOption: {
+              rate: '45%',
+              isHiddenRateText: false,
+              colorTo: `${color.mainColor}`,
+              colorFrom: `${color.pointColor}`,
+              width: '100%',
+              height: '40px',
+            },
+          },
+          {
+            nameOption: { name: 'HTML5', logoName: 'HTML-5', fontSize: '18px', logoSize: '24px' },
+            progressBarOption: {
+              rate: '30%',
+              isHiddenRateText: false,
+              colorTo: `${color.pointColor}`,
+              colorFrom: 'whitesmoke',
+              width: '100%',
+              height: '40px',
+            },
+          },
+          {
+            nameOption: { name: 'Nodejs', logoName: 'Nodejs', fontSize: '18px', logoSize: '24px' },
+            progressBarOption: {
+              rate: '85%',
+              isHiddenRateText: true,
+              colorTo: `${color.mainColor}`,
+              colorFrom: 'whitesmoke',
+              width: '100%',
+              height: '40px',
+            },
+          },
+        ]
+      }/>
       {/**
        * TechStackInput used only to find the logoName value in the TechStackList.
        * @component TechStackInput
@@ -116,7 +161,7 @@ function App() {
        * If you want view internal of TeckstackInputInstruction,
        * go to the './src/common/instruction/TeckstackInputInstruction.tsx'
        */}
-      <TeckstackInputInstruction id="TechStackInput" />
+      <TeckstackInputInstruction id="['TechStackInput', 'fa:stack-overflow']" />
       <TechStackInput />
 
       {/**
@@ -131,7 +176,7 @@ function App() {
        * @component Carousel
        * {@link https://github.com/modern-agile-team/dev-portfolio#carousel}
        */}
-      <Carousel id="Carousel">
+      <Carousel id="['Carousel', 'bx:carousel']">
         <Item title="1" />
         <Item title="2" />
         <Item title="3" />
@@ -141,7 +186,7 @@ function App() {
        * @component Gallery
        * {@link https://github.com/modern-agile-team/dev-portfolio#gallery}
        */}
-      <Gallery id="Gallery">
+      <Gallery id="['Gallery', 'clarity:image-gallery-line']">
         <Item />
         <Item />
         <Item />
@@ -157,7 +202,7 @@ function App() {
        * @component Masonry
        * {@link https://github.com/modern-agile-team/dev-portfolio#masonry}
        */}
-      <Masonry id="Masonry">
+      <Masonry id="['Masonry', 'ri:layout-masonry-line']">
         <Image src="https://picsum.photos/600/600/?random" />
         <Image src="https://picsum.photos/600/900/?random" />
         <Image src="https://picsum.photos/300/400/?random" />
@@ -180,16 +225,18 @@ function App() {
        * If you want view Card component,
        * go to the './src/common/instruction/VisitorCounterInstruction.tsx'
        */}
-      <VisitorCounterInstruction id="VisitorCounter" />
+      <VisitorCounterInstruction id="['VisitorCounter', 'mdi:counter']" />
 
       {/**
        * @component VisitorComment
        * {@link https://github.com/modern-agile-team/dev-portfolio#visitorcomment}
        */}
-      <VisitorCommentTitle id="VisitorComment">
+      <VisitorCommentTitle id="['VisitorComment', 'bx:comment-dots']">
         Visitor Comments
       </VisitorCommentTitle>
       <VisitorComment
+        backgroundColor={color.lightGrey}
+        progressbarColor={color.mainColor}
         handleChangeDescription={handleChangeDescription}
         handleChangeNickname={handleChangeNickname}
         handleChangePassword={handleChangePassword}
@@ -198,6 +245,7 @@ function App() {
         nickname={nickname}
         password={password}
         commentList={commentList}
+        buttonColor={color.mainColor}
       />
 
       {/**
@@ -207,20 +255,34 @@ function App() {
        * If you want view Card component,
        * go to the './src/common/instruction/CardInstruction.tsx'
        */}
-      <CardInstruction id="Card" />
+      <CardInstruction id="['Card', 'bi:card-list']" />
 
       {/**
        * @component Experience
        * {@link https://github.com/modern-agile-team/dev-portfolio#experience}
        */}
-      <Experience id="Experience" theme="basic" />
+      <Experience id="['Experience', 'carbon:list-boxes']" theme="basic" />
 
       {/**
        * @component Contact
        * {@link https://github.com/modern-agile-team/dev-portfolio#contact}
        */}
-      <ContactTitle id="Contact">Contact</ContactTitle>
-      <Contact />
+      <ContactTitle id="['Contact', 'fluent:contact-card-20-regular']">Contact</ContactTitle>
+      <Contact 
+        backgroundColor={color.mainColor}  
+        channels={[
+            {
+              name: "github",
+              redirectUrl: "https://",
+              color:`${color.pointColor}` ,
+            },
+            {
+              name: "facebook",
+              redirectUrl: "https://",
+              color: `${color.pointColor}`,
+            },
+          ]}
+        />
     </div>
   );
 }
@@ -233,6 +295,7 @@ export default App;
  * If you don't need this, delete both TechStackListTitle component and the style components below.
  */
 const TechStackListTitle = styled.h1`
+  color: ${color.mainColor};
   margin: 1em 1em;
   padding-bottom: 15px;
   border-bottom: 1px solid;

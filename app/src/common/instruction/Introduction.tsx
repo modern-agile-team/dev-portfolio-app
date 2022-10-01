@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import color from "../style/theme";
 
 const Introduction = ({ id }: { id: string }) => {
   return (
     <Wrap id={id}>
-      <span style={{ color: "red" }}>Hi there!</span>
+      <span style={{ color: `${color.pointColor}` }}>Hi there!</span>
       <span>This manual will help you create a better portfolio.</span>
       <span>
         Create a creative portfolio by referring to simple examples of the

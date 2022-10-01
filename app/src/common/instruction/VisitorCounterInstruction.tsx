@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { VisitorCounter } from "dev-portfolio";
 import countAPI from "../../apis/count";
+import color from "../style/theme";
 
 const VisitorCounterInstruction = ({ id }: { id: string }) => {
   const [todayCounter, setTodayCounter] = useState<number>(0);
@@ -35,11 +36,14 @@ const VisitorCounterInstruction = ({ id }: { id: string }) => {
           <VisitorCounter
             todayVisitor={todayCounter}
             totalVisitor={totalCounter}
+            backgroundColor={color.pointColor}
           />
           <VisitorCounter
             theme="simple"
             todayVisitor={todayCounter}
             totalVisitor={totalCounter}
+            totalBoldColor={color.mainColor}
+            todayBoldColor={color.pointColor}
           />
         </ThemeWrap>
       </InstructionWrap>
@@ -47,6 +51,9 @@ const VisitorCounterInstruction = ({ id }: { id: string }) => {
         theme="big-size"
         todayVisitor={todayCounter}
         totalVisitor={totalCounter}
+        backgroundColor={color.lightGrey}
+        todayBoldColor={color.mainColor}
+        totalBoldColor={color.pointColor}
       />
     </Wrap>
   );
