@@ -116,14 +116,6 @@ function App() {
       />
 
       {/**
-       * @component TechStackList
-       * {@link https://github.com/modern-agile-team/dev-portfolio#techstacklist}
-       */}
-      <TechStackListTitle id="['TechStackList', 'bx:coin-stack']">
-        Tech Stack List
-      </TechStackListTitle>
-      <TechStackList />
-      {/**
        * TechStackInput used only to find the logoName value in the TechStackList.
        * @component TechStackInput
        * {@link none}
@@ -133,6 +125,60 @@ function App() {
        */}
       <TeckstackInputInstruction id="['TechStackInput', 'fa:stack-overflow']" />
       <TechStackInput />
+
+      {/**
+       * @component TechStackList
+       * {@link https://github.com/modern-agile-team/dev-portfolio#techstacklist}
+       */}
+      <TechStackListTitle id="['TechStackList', 'bx:coin-stack']">
+        Tech Stack List
+      </TechStackListTitle>
+      <TechStackList
+        techStackList={[
+          {
+            nameOption: {
+              name: "Javascript",
+              logoName: "Javascript",
+              fontSize: "18px",
+              logoSize: "24px",
+            },
+            progressBarOption: {
+              rate: "45%",
+              colorTo: `${color.mainColor}`,
+              width: "100%",
+              height: "35px",
+            },
+          },
+          {
+            nameOption: {
+              name: "HTML5",
+              logoName: "HTML-5",
+              fontSize: "18px",
+              logoSize: "24px",
+            },
+            progressBarOption: {
+              rate: "30%",
+              colorTo: `${color.pointColor}`,
+              width: "100%",
+              height: "35px",
+            },
+          },
+          {
+            nameOption: {
+              name: "Nodejs",
+              logoName: "Nodejs",
+              fontSize: "18px",
+              logoSize: "24px",
+            },
+            progressBarOption: {
+              rate: "85%",
+              colorTo: `${color.mainColor}`,
+              width: "100%",
+              height: "35px",
+            },
+          },
+        ]}
+      />
 
       {/**
        * Just introduction for Carousel, Gallery and Masonry.
@@ -146,11 +192,13 @@ function App() {
        * @component Carousel
        * {@link https://github.com/modern-agile-team/dev-portfolio#carousel}
        */}
-      <Carousel id="['Carousel', 'bx:carousel']">
-        <Item title="1" />
-        <Item title="2" />
-        <Item title="3" />
-      </Carousel>
+      <CarouselWrap>
+        <Carousel id="['Carousel', 'bx:carousel']">
+          <Item title="1" />
+          <Item title="2" />
+          <Item title="3" />
+        </Carousel>
+      </CarouselWrap>
 
       {/**
        * @component Gallery
@@ -231,7 +279,7 @@ function App() {
        * @component Experience
        * {@link https://github.com/modern-agile-team/dev-portfolio#experience}
        */}
-      <Experience id="['Experience', 'carbon:list-boxes']" theme="basic" />
+      <Experience id="['Experience', 'carbon:list-boxes']" theme="vertical" />
 
       {/**
        * @component Contact
@@ -313,4 +361,12 @@ const VisitorCommentTitle = styled.h1`
 const ContactTitle = styled.h1`
   margin: 0;
   padding: 2em 1em 0 1em;
+`;
+
+const CarouselWrap = styled.div`
+  background-color: ${color.mainColor};
+  padding: 2em 0;
+  svg {
+    color: white;
+  }
 `;
