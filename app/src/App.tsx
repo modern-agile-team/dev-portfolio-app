@@ -44,6 +44,7 @@ function App() {
     handleCreateComment,
   } = useComment();
 
+  const itemList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
     /**
      * The 'className' in the <div> tag surrounding the components of 'dev-portfolio' must be 'App'.
@@ -67,7 +68,7 @@ function App() {
           {
             name: "github",
             redirectUrl: "https://",
-            color:`${color.pointColor}` ,
+            color: `${color.pointColor}`,
             size: "30px",
           },
           {
@@ -78,17 +79,17 @@ function App() {
           },
         ]}
         sideBarOption={{
-          mainTitle: 'dev-portfolio',
-          mainTitleSize: '24px',
-          mainTitleColor: 'white',
-          mainTitleAlign: 'left',
-          mainTitleBorderColor: 'white',
-          iconName: 'ant-design:menu-fold-outlined', //Refer to the guidelines.
-          iconSize: '28px',
+          mainTitle: "dev-portfolio",
+          mainTitleSize: "24px",
+          mainTitleColor: "white",
+          mainTitleAlign: "left",
+          mainTitleBorderColor: "white",
+          iconName: "ant-design:menu-fold-outlined", //Refer to the guidelines.
+          iconSize: "28px",
           iconColor: `${color.pointColor}`,
-          iconMargin: '0px 12px 0px 12px',
-          itemTextColor: 'white',
-          itemTextAlign: 'left',
+          iconMargin: "0px 12px 0px 12px",
+          itemTextColor: "white",
+          itemTextAlign: "left",
           itemBackgroundColor: `${color.mainColor}`,
           itemHoverdBackgroundColor: `${color.pointColor}`,
           backgroundColor: `${color.mainColor}`,
@@ -101,13 +102,18 @@ function App() {
        * If you want view internal of Introduction,
        * go to the './src/common/instruction/Introduction.tsx'
        */}
-      <Introduction id="['Manual Introduction', 'bx:home-smile']"/>
+      <Introduction id="['Manual Introduction', 'bx:home-smile']" />
 
       {/**
        * @component Intro
        * {@link https://github.com/modern-agile-team/dev-portfolio#intro}
        */}
-      <Intro id="['Intro', 'clarity:cursor-hand-open-line']" backgroundColor={color.lightGrey}/>
+      <Intro
+        id="['Intro', 'clarity:cursor-hand-open-line']"
+        backgroundColor={color.mainColor}
+        titleColor={color.pointColor}
+        shortIntroColor="white"
+      />
 
       {/**
        * @component TechStackList
@@ -116,43 +122,7 @@ function App() {
       <TechStackListTitle id="['TechStackList', 'bx:coin-stack']">
         Tech Stack List
       </TechStackListTitle>
-      <TechStackList 
-        techStackList={[
-          {
-            nameOption: { name: 'Javascript', logoName: 'Javascript', fontSize: '18px', logoSize: '24px' },
-            progressBarOption: {
-              rate: '45%',
-              isHiddenRateText: false,
-              colorTo: `${color.mainColor}`,
-              colorFrom: `${color.pointColor}`,
-              width: '100%',
-              height: '40px',
-            },
-          },
-          {
-            nameOption: { name: 'HTML5', logoName: 'HTML-5', fontSize: '18px', logoSize: '24px' },
-            progressBarOption: {
-              rate: '30%',
-              isHiddenRateText: false,
-              colorTo: `${color.pointColor}`,
-              colorFrom: 'whitesmoke',
-              width: '100%',
-              height: '40px',
-            },
-          },
-          {
-            nameOption: { name: 'Nodejs', logoName: 'Nodejs', fontSize: '18px', logoSize: '24px' },
-            progressBarOption: {
-              rate: '85%',
-              isHiddenRateText: true,
-              colorTo: `${color.mainColor}`,
-              colorFrom: 'whitesmoke',
-              width: '100%',
-              height: '40px',
-            },
-          },
-        ]
-      }/>
+      <TechStackList />
       {/**
        * TechStackInput used only to find the logoName value in the TechStackList.
        * @component TechStackInput
@@ -187,15 +157,13 @@ function App() {
        * {@link https://github.com/modern-agile-team/dev-portfolio#gallery}
        */}
       <Gallery id="['Gallery', 'clarity:image-gallery-line']">
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        {itemList.map((idx) => (
+          <Item
+            key={idx}
+            hoverdInnerBorderColor={color.mainColor}
+            titleColor={color.pointColor}
+          />
+        ))}
       </Gallery>
 
       {/**
@@ -235,8 +203,8 @@ function App() {
         Visitor Comments
       </VisitorCommentTitle>
       <VisitorComment
-        backgroundColor={color.lightGrey}
-        progressbarColor={color.mainColor}
+        backgroundColor={color.mainColor}
+        progressbarColor={color.pointColor}
         handleChangeDescription={handleChangeDescription}
         handleChangeNickname={handleChangeNickname}
         handleChangePassword={handleChangePassword}
@@ -246,6 +214,8 @@ function App() {
         password={password}
         commentList={commentList}
         buttonColor={color.mainColor}
+        listNicknameColor={color.mainColor}
+        listDateColor={color.pointColor}
       />
 
       {/**
@@ -267,22 +237,46 @@ function App() {
        * @component Contact
        * {@link https://github.com/modern-agile-team/dev-portfolio#contact}
        */}
-      <ContactTitle id="['Contact', 'fluent:contact-card-20-regular']">Contact</ContactTitle>
-      <Contact 
-        backgroundColor={color.mainColor}  
+      <ContactTitle id="['Contact', 'fluent:contact-card-20-regular']">
+        Contact
+      </ContactTitle>
+      <Contact
+        titleColor={color.pointColor}
+        subTitleColor={color.lightGrey}
+        backgroundColor={color.mainColor}
         channels={[
-            {
-              name: "github",
-              redirectUrl: "https://",
-              color:`${color.pointColor}` ,
-            },
-            {
-              name: "facebook",
-              redirectUrl: "https://",
-              color: `${color.pointColor}`,
-            },
-          ]}
-        />
+          {
+            name: "github",
+            redirectUrl: "https://",
+            color: `${color.pointColor}`,
+          },
+          {
+            name: "facebook",
+            redirectUrl: "https://",
+            color: `${color.pointColor}`,
+          },
+        ]}
+        aboutMeInfos={[
+          {
+            title: "Where I live",
+            titleColor: `${color.pointColor}`,
+            description: "Seoul, Republic of Korea",
+            descriptionColor: `${color.lightGrey}`,
+          },
+          {
+            title: "Give me a call",
+            titleColor: `${color.pointColor}`,
+            description: "T. +82 (0)10 1234 5678",
+            descriptionColor: `${color.lightGrey}`,
+          },
+          {
+            title: "Or, why don’t you email me?",
+            titleColor: `${color.pointColor}`,
+            description: "dev-portfolio@gmail.com",
+            descriptionColor: `${color.lightGrey}`,
+          },
+        ]}
+      />
     </div>
   );
 }

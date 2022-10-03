@@ -36,7 +36,8 @@ const VisitorCounterInstruction = ({ id }: { id: string }) => {
           <VisitorCounter
             todayVisitor={todayCounter}
             totalVisitor={totalCounter}
-            backgroundColor={color.pointColor}
+            backgroundColor={color.mainColor}
+            titleColor={color.pointColor}
           />
           <VisitorCounter
             theme="simple"
@@ -51,9 +52,12 @@ const VisitorCounterInstruction = ({ id }: { id: string }) => {
         theme="big-size"
         todayVisitor={todayCounter}
         totalVisitor={totalCounter}
-        backgroundColor={color.lightGrey}
-        todayBoldColor={color.mainColor}
+        backgroundColor={color.mainColor}
+        todayBoldColor={color.pointColor}
         totalBoldColor={color.pointColor}
+        titleColor={color.pointColor}
+        todayTitleColor="white"
+        totalTitleColor="white"
       />
     </Wrap>
   );
