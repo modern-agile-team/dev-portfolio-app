@@ -143,7 +143,8 @@ function App() {
               logoSize: "24px",
             },
             progressBarOption: {
-              rate: "45%",
+              rateText: "45%",
+              backgroundColor: `${color.lightGrey}`,
               colorTo: `${color.mainColor}`,
               width: "100%",
               height: "35px",
@@ -157,10 +158,13 @@ function App() {
               logoSize: "24px",
             },
             progressBarOption: {
-              rate: "30%",
-              colorTo: `${color.pointColor}`,
+              rateText: "30%",
+              backgroundColor: `${color.lightGrey}`,
+              colorTo: `${color.mainColor}`,
+              colorFrom: `${color.pointColor}`,
               width: "100%",
               height: "35px",
+              isBlinking: true,
             },
           },
           {
@@ -171,7 +175,9 @@ function App() {
               logoSize: "24px",
             },
             progressBarOption: {
-              rate: "85%",
+              rateText: "85%",
+              rateTextColor: `${color.lightGrey}`,
+              backgroundColor: `${color.lightGrey}`,
               colorTo: `${color.mainColor}`,
               width: "100%",
               height: "35px",
