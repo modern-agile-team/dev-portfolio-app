@@ -43,8 +43,8 @@ const VisitorCounterInstruction = ({ id }: { id: string }) => {
             theme="simple"
             todayVisitor={todayCounter}
             totalVisitor={totalCounter}
-            totalBoldColor={color.mainColor}
-            todayBoldColor={color.pointColor}
+            totalVisitorColor={color.mainColor}
+            todayVisitorColor={color.pointColor}
           />
         </ThemeWrap>
       </InstructionWrap>
@@ -53,8 +53,8 @@ const VisitorCounterInstruction = ({ id }: { id: string }) => {
         todayVisitor={todayCounter}
         totalVisitor={totalCounter}
         backgroundColor={color.mainColor}
-        todayBoldColor={color.pointColor}
-        totalBoldColor={color.pointColor}
+        todayVisitorColor={color.pointColor}
+        totalVisitorColor={color.pointColor}
         titleColor={color.pointColor}
         todayTitleColor="white"
         totalTitleColor="white"

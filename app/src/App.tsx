@@ -25,6 +25,8 @@ import {
 import useComment from "./hooks/useComment";
 import "./App.css";
 import color from "./common/style/theme";
+import { SkillInstruction } from "./common/instruction/SkillInstruction";
+import { ChannelInstruction } from "./common/instruction/ChannelInstruction";
 
 function App() {
   /**
@@ -186,6 +188,8 @@ function App() {
         ]}
       />
 
+      <SkillInstruction />
+
       {/**
        * Just introduction for Carousel, Gallery and Masonry.
        *
@@ -287,6 +291,7 @@ function App() {
        */}
       <Experience id="['Experience', 'carbon:list-boxes']" theme="vertical" />
 
+      <ChannelInstruction />
       {/**
        * @component Contact
        * {@link https://github.com/modern-agile-team/dev-portfolio#contact}
