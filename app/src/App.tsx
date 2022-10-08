@@ -13,7 +13,6 @@ import {
   TechStackInput,
   VisitorComment,
 } from "dev-portfolio";
-
 import styled from "styled-components";
 import {
   CardInstruction,
@@ -27,6 +26,7 @@ import "./App.css";
 import color from "./common/style/theme";
 import { SkillInstruction } from "./common/instruction/SkillInstruction";
 import { ChannelInstruction } from "./common/instruction/ChannelInstruction";
+import { ProgressBarInstruction } from "./common/instruction/ProgressBarInstruction";
 
 function App() {
   /**
@@ -187,6 +187,8 @@ function App() {
           },
         ]}
       />
+
+      <ProgressBarInstruction />
 
       <SkillInstruction />
 
