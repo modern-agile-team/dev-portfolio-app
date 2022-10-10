@@ -27,6 +27,7 @@ import color from "./common/style/theme";
 import { SkillInstruction } from "./common/instruction/SkillInstruction";
 import { ChannelInstruction } from "./common/instruction/ChannelInstruction";
 import { ProgressBarInstruction } from "./common/instruction/ProgressBarInstruction";
+import { ContactInstruction } from "./common/instruction/ContactInstruction";
 
 function App() {
   /**
@@ -188,9 +189,9 @@ function App() {
         ]}
       />
 
-      <ProgressBarInstruction />
+      <ProgressBarInstruction id="['ProgressBar', 'ci:bar-chart-horizontal']" />
 
-      <SkillInstruction />
+      <SkillInstruction id="['Skill', 'charm:stack']" />
 
       {/**
        * Just introduction for Carousel, Gallery and Masonry.
@@ -293,15 +294,15 @@ function App() {
        */}
       <Experience id="['Experience', 'carbon:list-boxes']" theme="vertical" />
 
-      <ChannelInstruction />
+      <ChannelInstruction id="['Channel', 'fluent:channel-48-filled']" />
       {/**
        * @component Contact
        * {@link https://github.com/modern-agile-team/dev-portfolio#contact}
        */}
-      <ContactTitle id="['Contact', 'fluent:contact-card-20-regular']">
-        Contact
-      </ContactTitle>
+
+      <ContactInstruction />
       <Contact
+        id="['Contact', 'fluent:contact-card-20-regular']"
         titleColor={color.pointColor}
         subTitleColor={color.lightGrey}
         backgroundColor={color.mainColor}
@@ -367,15 +368,10 @@ const VisitorCommentTitle = styled.h1`
 `;
 
 /**
- * Just styled component for Contact's title
+ * Just styled component for Carousel's title
  *
- * If you don't need this, delete both ContactTitle component and the style components below.
+ * If you don't need this, delete both CarouselWrap component and the style components below.
  */
-const ContactTitle = styled.h1`
-  margin: 0;
-  padding: 2em 1em 0 1em;
-`;
-
 const CarouselWrap = styled.div`
   background-color: ${color.mainColor};
   padding: 2em 0;

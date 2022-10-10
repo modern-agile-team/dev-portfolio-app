@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import color from "../../common/style/theme";
 
-export const ProgressBarInstruction = () => {
+export const ProgressBarInstruction = ({ id }: { id: string }) => {
   return (
-    <Wrap>
+    <Wrap id={id}>
       <h1>ProgressBar</h1>
       <span>
         If you want to use the Progress bar alone on the Tech Stack List, use

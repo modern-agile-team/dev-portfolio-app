@@ -2,9 +2,9 @@ import { Skill } from "dev-portfolio";
 import React from "react";
 import styled from "styled-components";
 
-export const SkillInstruction = () => {
+export const SkillInstruction = ({ id }: { id: string }) => {
   return (
-    <Wrap>
+    <Wrap id={id}>
       <h1>Skill</h1>
       <span>
         If you want to show each stack without using the Tech Stack List, you

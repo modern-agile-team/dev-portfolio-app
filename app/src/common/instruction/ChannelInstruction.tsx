@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import color from "../style/theme";
 
-export const ChannelInstruction = () => {
+export const ChannelInstruction = ({ id }: { id: string }) => {
   return (
-    <Wrap>
+    <Wrap id={id}>
       <h1>Channel &amp; Channels</h1>
       <span>This component can use anywhere.</span>
       <span>
