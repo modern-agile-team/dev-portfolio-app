@@ -1,3 +1,6 @@
+[DEPRECATED] The  repository is no longer updated. Even if you send Pull Request and Issue, it will not be merged.
+It has been merged into [create-dev-portfolio](https://github.com/modern-agile-team/create-dev-portfolio), so please refer to the following link: [create-dev-portfolio](https://github.com/modern-agile-team/create-dev-portfolio)
+
 # dev-portfolio-app
 Boiler-Plate for web development using dev-portfolio library.
 
